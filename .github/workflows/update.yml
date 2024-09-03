@@ -16,15 +16,15 @@ jobs:
           node-version: '20'
       - name: Install dependencies
         run: npm install
-        working-directory: ./utils'
+        working-directory: utils
   
       - name: Install ts + ts-node
         run: npm install ts-node typescript @types/node
-        working-directory: ./utils
+        working-directory: utils
   
       - name: Run script
         run: npx ts-node utils/index.ts
-        working-directory: ./utils
+        working-directory: utils
 
       - name: Update README.md
         run: |
