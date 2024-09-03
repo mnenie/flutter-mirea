@@ -23,7 +23,7 @@ jobs:
         working-directory: utils
   
       - name: Run script
-        run: npx ts-node utils/index.ts
+        run: npx ts-node index.ts
         working-directory: utils
 
       - name: Update README.md
