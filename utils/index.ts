@@ -28,7 +28,7 @@ function addReadmes(): void {
   const readmeDirs = getDirectories('..')
 
   readmeDirs.forEach((dirName) => {
-    const link = `* [${dirName}](${dirName}/README.md)\n`
+    const link = `* \n[${dirName}](${dirName}/README.md)\n`
     if (!contentMain.includes(link)) {
       contentMain += link
     }
