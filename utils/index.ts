@@ -11,7 +11,7 @@ function getDirectories<T extends string | fs.PathLike>(directory: T): Directori
 
   files.forEach((file) => {
     const _path = path.join(directory as string, file)
-    if (fs.statSync(_path).isDirectory()) {
+    if (fs.statSync(_path).isDirectory() && !['node_modules', '.git'].includes(file)) {
       const readmePath = path.join(_path, 'README.md')
       if (fs.existsSync(readmePath)) {
         directories.push(_path)
@@ -25,15 +25,16 @@ function getDirectories<T extends string | fs.PathLike>(directory: T): Directori
 
 function addReadmes(): void {
   let contentMain = fs.readFileSync(readme, 'utf8')
-  const directories = getDirectories('.')
+  const readmeFiles = getDirectories('.')
 
-  directories.forEach((dir) => {
-    const relative = path.relative('.', path.join(dir, 'README.md'))
-    const link = `* [${dir}](${relative})\n`
+  readmeFiles.forEach((filePath) => {
+    const relative = path.relative('.', filePath)
+    const link = `* [${relative}](${relative})\n`
     if (!contentMain.includes(link)) {
       contentMain += link
     }
   })
+
   fs.writeFileSync(readme, contentMain, 'utf8')
 }
 // TODO
