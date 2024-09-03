@@ -7,3 +7,5 @@
 ### Все доступные README: 
 
 * [flutter_app_1](flutter_app_1/README.md)
+
+* [flutter_2](flutter_2/README.md)
