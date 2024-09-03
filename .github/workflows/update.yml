@@ -14,9 +14,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm install
-      - run: npm install ts-node typescript @types/node
-      - run: npx ts-node utils/index.ts
+      - name: Install dependencies
+        run: npm install
+        working-directory: ./utils'
+  
+      - name: Install ts + ts-node
+        run: npm install ts-node typescript @types/node
+        working-directory: ./utils
+  
+      - name: Run script
+        run: npx ts-node utils/index.ts
+        working-directory: ./utils
+
       - name: Update README.md
         run: |
           git config --global user.name 'github-actions[bot]'
