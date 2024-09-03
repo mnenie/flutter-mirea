@@ -1,7 +1,7 @@
 import * as fs from 'node:fs'
 import * as path from 'node:path'
 
-const readme = path.resolve('README.md')
+const readme = path.resolve('../README.md')
 
 type Directories = string[]
 
