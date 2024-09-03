@@ -23,6 +23,6 @@ flutter run
 
 ### Screens
 
-<img src="/static/practice_1/android.png" />&nbsp;
-<img src="/static/practice_1/chrome.png" />
+<img src="/-static/practice_1/android.png" />&nbsp;
+<img src="/-static/practice_1/chrome.png" />
 
