@@ -11,7 +11,7 @@ function getDirectories<T extends string | fs.PathLike>(directory: T): Directori
 
   files.forEach((file) => {
     const _path = path.join(directory as string, file)
-    if (fs.statSync(_path).isDirectory() && !['node_modules', '.git', 'ios'].includes(file)) {
+    if (fs.statSync(_path).isDirectory() && !['node_modules', '.git'].includes(file)) {
       const readmePath = path.join(_path, 'README.md')
       if (fs.existsSync(readmePath)) {
         directories.push(file)
