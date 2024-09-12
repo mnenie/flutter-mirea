@@ -17,4 +17,4 @@ flutter run
 
 ### Screens
 
-<img style="width: 80%" src="/-static/practice_2/emulator.png" />
+<img src="/-static/practice_2/emulator.png" />
