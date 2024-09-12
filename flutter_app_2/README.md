@@ -17,4 +17,4 @@ flutter run
 
 ### Screens
 
-<img src="/-static/practice_2/emulator.png" />
+<img src="/-static/practice_2/emulator_update.png" />
